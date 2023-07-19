@@ -11,7 +11,7 @@ services:
       - "5555:5555"
     volumes:
       - ./project/:/main
-    command: sh -c "npm install && npm run dev"
+    command: sh -c "sh /main/run.sh && npm run dev"
     depends_on:
       - "postgres"
   postgres:
